@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Tema Livre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+ 
+        header {
+            background-color: #864eff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+ 
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+ 
+        nav a:hover {
+            color: #000000;
+        }
+ 
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+ 
+        .section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+ 
+        .section:hover {
+            transform: translateY(-5px);
+        }
+ 
+        h1 {
+            color: #000000;
+            margin-top: 0;
+        }
+ 
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+ 
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+ 
+        img:hover {
+            transform: scale(1.05);
+        }
+ 
+        form {
+            text-align: center;
+        }
+ 
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+ 
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            margin-bottom: 20px;
+        }
+ 
+        button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        button:hover {
+            background-color: #555;
+        }
+ 
+        footer {
+            background-color: #864eff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+ 
+        footer p {
+            margin: 0;
+            color: #fff;
+        }
+ 
+    </style>
+</head>
+ 
+<body>
+    <header>
+        <nav>
+            <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital#:~:text=Acessibilidade%20Digital%20%C3%A9%20a%20elimina%C3%A7%C3%A3o,maneira%20efetiva%20com%20as%20p%C3%A1ginas." accesskey="h">Home</a>
+            <a href="#https://www.handtalk.me/br/blog/o-que-e-acessibilidade-digital/" accesskey="c">Contato</a>
+            <a href="https://hospitalsantamonica.com.br/a-saude-mental-e-a-importancia-dela-na-vida-das-pessoas/" accesskey="q" target="_blank" id="sobre">Sobre</a>
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="section">
+            <h1>Acessibilidade Digital</h1>
+            <p>A expressão acessibilidade Web refere-se a prática inclusiva de fazer websites que possam ser utilizados por todas as pessoas que tenham deficiência ou não. Quando os sites são corretamente concebidos, desenvolvidos e editados, todos os usuários podem ter igual acesso à informação e funcionalidade.</p>
+            <p class="shortcut">Pressione <strong>CTRL + Q</strong> para abrir a página Sobre em uma nova guia.</p>
+        </section>
+       
+        <section class="section">
+            <a href="https://projetocolabora.com.br/wp-content/uploads/2023/12/20231006acessibilidadedigital1-freepik.jpg" target="_blank">
+                <img src="img1.jpg" alt="Descrição da Imagem">
+            </a>
+            <p class="shortcut">Pressione <strong>CTRL + I</strong> para acessar o link original da imagem.</p>
+        </section>
+       
+        <section class="section">
+            <form action="#" method="post">
+                <label for="mensagem">Deixe uma mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." accesskey="m"></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+            <p class="shortcut">Pressione <strong>CTRL + M</strong> para acessar a área para digitar a mensagem.</p>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>Desenvolvido por Maria Eduarda Gonçalves da Silva</p>
+    </footer>
+ 
+    <script>
+        // Adicionando atalhos de teclado
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey && event.key === "q") {
+                window.open(document.getElementById("sobre").href, '_blank');
+            } else if (event.ctrlKey && event.key === "i") {
+                window.open('https://projetocolabora.com.br/wp-content/uploads/2023/12/20231006acessibilidadedigital1-freepik.jpg');
+            } else if (event.ctrlKey && event.key === "m") {
+                document.getElementById("mensagem").focus();
+            }
+        });
+    </script>
+</body>
+ 
+</html>
